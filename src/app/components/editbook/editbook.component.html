@@ -1,0 +1,58 @@
+<div class="container d-flex justify-content-center">
+  <form class="w-25" #form="ngForm" (ngSubmit)="form.valid && onSubmit()">
+    <h3 class="mt-3 mb-3">Edit</h3>
+    <div class="mb-3">
+      <label for="title" class="form-label">Book Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="bookTitle"
+        [(ngModel)]="book.title"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Short Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="desc"
+        name="bookDesc"
+        [(ngModel)]="book.desc"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author"
+        name="bookAuthor"
+        [(ngModel)]="book.author"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="about" class="form-label">About</label>
+      <textarea
+        class="form-control"
+        id="about"
+        rows="3"
+        name="bookAbout"
+        [(ngModel)]="book.about"
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="imagepath" class="form-label">Image Link</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imagepath"
+        name="imagePath"
+        [(ngModel)]="book.imagePath"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
